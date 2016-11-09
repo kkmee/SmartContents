@@ -106,5 +106,43 @@
 
 
 
+
+
+
+
+<!-- 휴대폰 번호 form 작성 예시 (옛날에 쓰던 기법) -->
+<label for="">앞자리</label>
+<input type="text" placeholder="앞자리" />
+
+<label for="" class="ir">중간자리</label>
+<input type="text" placeholder="중간자리" />
+
+<label for="" class="ir">끝자리</label>
+<input type="text" placeholder="끝자리" />
+
+<style>
+.ir { position:absolute; left:-9999px; }
+</style>
+ <!-- //휴대폰 번호 form 작성 예시 (옛날에 쓰던 기법) -->
+
+
+<!-- 요즘 쓰는 기법 -->
+<label for="">앞자리</label>
+<input type="text" name="" id="" placeholder="앞자리" />
+
+<label for="">
+    <input type="text" name="" id="" placeholder="중간자리" />
+</label>
+
+<label for="">
+    <input type="text" name="" id="" placeholder="끝자리" />
+</label>
+
+<style>
+.ir { position:absolute; left:-9999px; }
+</style>
+<!-- //요즘 쓰는 기법 -->
+
+
 </body>
 </html>
