@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>label</title>
+</head>
+<body>
+
+
+
+<!--
+<input type="text" placeholder="아이디 입력" /> 이것만 쓰면 장님, 컴퓨터는 아이디 적는 란인지 모른다. 그래서 label을 달아줘야한다 -->
+
+<p>
+    <label for="userid">아이디</label>
+    <input type="text" id="userid" placeholder="아이디 입력" />
+</p>
+
+<!-- 앞에 "제목"이 안붙는 경우엔 label로 input을 감싸줘도 된다 -->
+<p>
+    <label for="userid"><input type="text" id="userid" placeholder="아이디 입력" /></label>
+</p>
+
+
+
+
+<p>
+    <label for="userpassword">비밀번호</label>
+    <input type="password" id="userpassword" placeholder="비밀번호를 입력하세요" />
+</p>
+
+
+
+
+<p>
+    <label for="sel_man">남자</label>
+    <input type="radio" id="sel_man" name="trans" />
+    <label for="sel_woman">여자</label>
+    <input type="radio" id="sel_woman" name="trans" />
+</p>
+
+
+
+
+<p>
+    <label for="sports1">농구</label>
+    <input type="checkbox" id="sports1" />
+    <label for="sports2">야구</label>
+    <input type="checkbox" id="sports2" />
+    <label for="sports3">축구</label>
+    <input type="checkbox" id="sports3" />
+</p>
+
+
+
+
+<p>
+    <label for="btn_confirm">확인</label>
+    <input type="button" value="확인" id="btn_confirm" />
+</p>
+
+
+
+
+<p>
+    <label for="btn_reset">초기화</label>
+    <input type="reset" value="초기화" id="btn_reset" />
+</p>
+
+
+
+
+<p>
+    <label for="btn_submit">전송</label>
+    <input type="submit" value="전송" id="btn_submit" />
+</p>
+
+
+
+
+<p>
+    <label for="sel_file">파일선택</label>
+    <input type="file" id="sel_file" />
+</p>
+
+
+</body>
+</html>
