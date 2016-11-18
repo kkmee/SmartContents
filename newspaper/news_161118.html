@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>일요신문</title>
+<style>
+/* 공통 */
+body { background:#ddd; font-family:"돋움"; }
+body, html, p, h1, h2, h3, h4, h5, h6 { margin:0px; padding:0px; }
+img { border:0px; }
+ul, ol, li, dl, dt, dd { list-style:none; margin:0px; padding:0px; }
+a { color:#000; text-decoration:none; }
+a:hover { color:#D70C19; text-decoration:underline; }
+
+/* 레이아웃 */
+#wrap { width:900px; height:540px; margin:0px auto; background:#FFF; }
+.thumb { display:block; overflow:hidden; }
+.thumb img { width:100%; height:100%; }
+
+/* header */
+#header { position:relative; width:840px; margin:0px 30px; height:110px; border-bottom:3px solid #545454; }
+#header h1 { height:55px; padding-top:20px; }
+#header ul { height:22px; padding:6px 0px 7px 0px; }
+#header li { float:left; margin-right:4px; }
+#header li a { font-size:0px; }
+#header li span { font-size:11px; margin-left:4px; }
+#header .banner { position:absolute; right:0px; bottom:8px; height:60px; }
+
+/* contents */
+#contents { margin:14px 30px 0px; height:413px; }
+.leftNews { float:left; width:576px; height:131px; }
+
+.headline { height:120px; margin-bottom:12px; }
+.headline .thumb { float:left; width:190px; height:120px; }
+.headline h2 { font-size:24px; line-height:34px; margin-left:200px; }
+.headline .thumb_txt { display:block; height:34px; margin-left:200px; margin-top:8px; font-size:12px; line-height:18px; color:#a1a1a1; overflow:hidden; letter-spacing:-0.4px; }
+
+.hotNews { float:left; width:100px; height:239px; padding:5px 8px; border:1px solid #e0e0e0; background:#fbfbfb; }
+.hotNews h3 { font-size:12px; font-weight:bold; color:#D70C19; margin-bottom:4px; }
+.hotNews li { height:110px; }
+.hotNews li span { display:block; font-size:11px; line-height:15px; }
+
+.subNews { margin-left:118px; border-top:1px solid #e0e0e0; }
+.sub_headline { width:442px; height:70px; padding:8px; border-bottom:1px solid #e0e0e0; background:#f4f4f4; }
+.sub_headline li { float:left; width:221px; }
+.sub_headline .thumb { float:left; display:block; width:65px; height:70px; }
+.sub_headline strong, .sub_headline li h3+h3 span { display:block; margin-left:75px; font-size:12px; letter-spacing:-1px; line-height:17px; }
+.sub_headline strong { margin-bottom:3px; }
+.sub_headline li h3+h3 span { font-weight:normal; }
+
+.newsList { padding:0px 14px; height:154px; margin-top:9px; }
+.newsList li { height:22px; line-height:22px; background:url("http://static.naver.net/newsstand/2016/1118/ilyo/155551/011.gif") no-repeat 0px 3px; padding-left:12px; font-family:"굴림"; font-size:13px; font-weight:bold; }
+
+/* 버튼 */
+.headBtn { display:inline-block; height:22px; background:url("../images/sp_nwstd.png") no-repeat; vertical-align:top; }
+.read { width:66px; background-position:-187px -199px; }
+.user { width:77px; background-position:-293px -174px; }
+.share { width:28px; background-position:-500px -270px; }
+.rank { display:inline-block; width:12px; height:10px; text-align:center; line-height:11px; font-size:11px; font-weight:bold;  }
+.rank_up { border:1px solid #999; background:#a8a8a8; color:#FFF; }
+.rank_down { border:1px solid #e8e8e8; color:#a8a8a8; }
+</style>
+</head>
+<body>
+
+<div id="wrap">
+
+<!-- header -->
+<div id="header">
+    <h1><a href=""><img src="http://static.naver.net/newsstand/up/2016/0902/nsd112932886.png" alt="일요신문"></a></h1>
+    <ul>
+        <li><a href="" class="headBtn read">구독하기</a></li>
+        <li><a href="" class="headBtn user">이용자 한마디</a></li>
+        <li><a href="" class="headBtn share">공유하기</a></li>
+        <li><span>11-18 20:16 편집</span></li>
+    </ul>
+    <a href="" class="banner"><img src="http://adcreative.naver.com/ad3/1004/1004874/468_60_01473227375503.jpg" alt="배너"></a>
+</div>
+<!-- //header -->
+
+<!-- contents -->
+<div id="contents">
+    <!-- left news -->
+    <div class="leftNews">
+        <div class="headline">
+            <a href="">
+                <span class="thumb"><img src="http://static.naver.net/newsstand/2016/1118/ilyo/155551/001.jpg" alt="헤드라인 썸네일" /></span>
+                <h2>박근혜 대통령 '엘시티 수사' 역습카드 꺼내든 속사정</h2>
+                <span class="thumb_txt">[일요신문] 미스터리한 ‘단독 영수회담’ 카드가 여의도 정국을 덮쳤다. 영수회담 제안자나 수용자의 명분과 실익도 미스터리다. 추미애 민주당 대</span>
+            </a>
+        </div>
+        <div class="hotNews">
+            <h3>핫뉴스</h3>
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="thumb"><img src="http://static.naver.net/newsstand/2016/1118/ilyo/155551/004.jpg" alt="핫뉴스 썸네일" /></span>
+                        <span>예능에 정치 풍자가 돌아왔다</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="thumb"><img src="http://static.naver.net/newsstand/2016/1118/ilyo/155551/005.jpg" alt="핫뉴스 썸네일" /></span>
+                        <span>일본 '쓰레깃더미 집' 사회적 문제</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="subNews">
+            <div class="sub_headline">
+                <ul>
+                    <li>
+                        <h3>
+                            <a href="">
+                                <span class="thumb"><img src="http://static.naver.net/newsstand/2016/1118/ilyo/155551/002.jpg" alt="서브헤드라인 썸네일" /></span>
+                                <strong>[단독] 북한 리영길 '화려한 부활' 배경과 의미</strong>
+                            </a>
+                        </h3>
+                        <h3>
+                            <a href="">
+                                <span>[일요신문] 김정은시대 들어 군부를 중심으로 다수의 핵</span>
+                            </a>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            <a href="">
+                                <span class="thumb"><img src="http://static.naver.net/newsstand/2016/1118/ilyo/155551/003.jpg" alt="서브헤드라인 썸네일" /></span>
+                                <strong>이재명 급부상 뒤엔 '손가락혁명군' 지원사격 있다</strong>
+                            </a>
+                        </h3>
+                        <h3>
+                            <a href="">
+                                <span>[일요신문] 이재명 성남시장이 야권의 유력 대선주자로</span>
+                            </a>
+                        </h3>
+                    </li>
+                </ul>
+            </div>
+            <div class="newsList">
+                <ul>
+                    <li><a href="">이승환 덕에 크고 이효리 키운…차은택 어제 그리고 오늘</a></li>
+                    <li><a href="">미리 보는 SPC그룹 3세 경영 ‘위기와 기회’</a></li>
+                    <li><a href="">'낙하산 투하 올스톱' 차기 은행장 인사 시계제로</a></li>
+                    <li><a href="">정청래, 추미애 '박근혜 대통령 계엄령'설 가세? '헌법 77조'까지 등장</a></li>
+                    <li><a href="">청와대, 추미애 '계엄령' 발언에 "무책임한 정치적 선동" 발끈</a></li>
+                    <li><a href="">새누리당 "특검·국조, 野 주장 전폭 수용했다, 이제 국회서 역할해야"</a></li>
+                    <li><a href="">심상정 "정국수습 컨트롤타워 야당 지도부 역할"</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- //left news -->
+
+    <!-- right news -->
+    <div class="rightNews">
+        <h3>인기 뉴스</h3>
+        <ul>
+            <li><a href=""><span class="rank rank_up">1</span> <strong>이재명 급부상 뒤엔 '손가락혁명군' 지원</strong></a></li>
+            <li><a href=""><span class="rank rank_up">2</span> [단독] 이재명 시장 “최순실 특검에 세월호</a></li>
+            <li><a href=""><span class="rank rank_up">3</span> KAIST 최초 ‘사시 수석’ 영예 차지한 22살 정세</a></li>
+            <li><a href=""><span class="rank rank_down">4</span> 박 대통령, 최순실 단골 병원서 ‘길라임’ 가명</a></li>
+            <li><a href=""><span class="rank rank_down">5</span> 약촌오거리 재심 ‘무죄’ 선고 됐지만…“배려</a></li>
+        </ul>
+        <h3>배틀타운</h3>
+        <ul>
+            <li><a href="">[배틀맘] 선생님에게 커피 기프티콘 쏘면</a></li>
+            <li><a href="">[배틀맘] 우리 아이 실종 걱정 줄이는 ‘사전지문</a></li>
+            <li><a href="">[올댓카] 다들 월동준비 하셨어요? 겨울용 타이</a></li>
+            <li><a href="">[배틀주 단신] 신신제약 등 4개업체 코스닥 상장</a></li>
+            <li><a href="">[최순실 게이트] 최순실 정유라 35억원 관련 삼</a></li>
+        </ul>
+        <ul class="photoNews">
+            <li>
+                <a href="">
+                    <span class="thumb"><img src="http://static.naver.net/newsstand/2016/1118/ilyo/155551/006.jpg" alt="포토뉴스 썸네일" /></span>
+                    <span class="thumb_txt">이대 부정입학 특별감사 발표</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="thumb"><img src="http://static.naver.net/newsstand/2016/1118/ilyo/155551/007.jpg" alt="포토뉴스 썸네일" /></span>
+                    <span class="thumb_txt">이대 부정입학 특별감사 발표</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- //right news -->
+
+<style>
+.rightNews { position:relative; width:254px; height:380px; padding-left:10px; margin-left:576px; }
+.rightNews:before { position:absolute; left:0px; top:0px; width:1px; height:100%; background:#e0e0e0; content:""; }
+
+.rightNews h3 { border-bottom:2px solid #D70C19; padding-bottom:3px; font-size:12px; color:#D70C19; }
+.rightNews ul { height:100px; margin-top:5px; }
+.rightNews li { height:20px; font-size:12px; letter-spacing:-0.4px; }
+.rightNews ul + h3 { margin-top:6px; }
+.rightNews ul + h3 + ul li { background:url("http://static.naver.net/newsstand/2016/1118/ilyo/155551/011.gif") no-repeat 0 -16px; padding-left:6px; }
+
+ul.photoNews { height:120px; }
+.photoNews li { float:left; width:116px; height:116px; padding-top:4px; }
+.photoNews li:first-child { margin-right:12px; }
+.photoNews li .thumb { display:block; width:116px; height:80px; }
+.photoNews li .thumb_txt { display:block; height:30px; font-size:11px; line-height:15px; padding-top:6px; }
+
+
+</style>
+
+
+
+
+</div>
+<!-- //contents -->
+<style>
+
+
+
+
+
+</style>
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
