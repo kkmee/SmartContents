@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>서울신문</title>
+<style>
+body, html { margin:0px; padding:0px; font-family:"돋움"; }
+h1, h2, h3, h4, h5, h6, p { margin:0px; padding:0px; }
+ul, ol, li, dl, dt, dd { list-style:none; margin:0px; padding:0px }
+img { border:0px; }
+a { color:#000; text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+#wrap { width:840px; margin:0px auto; }
+
+/* header */
+#header { position:relative; width:840px; height:111px; border-bottom:3px solid #545454; margin-bottom:10px; }
+#header h1 { height:55px; padding-top:20px; }
+#header ul { padding:7px 0px; }
+#header li { float:left; margin-right:4px; }
+#header li span { font-size:11px; margin-left:4px; }
+#header .banner { position:absolute; right:0px; bottom:7px; height:60px; }
+
+/* left news */
+.leftNews { position:relative; float:left; width:543px; height:380px; }
+.leftNews h2 { height:33px; font-family:"Nanumgothic"; font-size:24px; letter-spacing:-0.4px; }
+.leftNews::after { position:absolute; right:0px; top:0px; width:1px; height:100%; background-color:#ccc; content:""; }
+
+.photoNews { float:left; width:242px; }
+.photoNews .top_photo a { position:relative; display:block; height:171px; overflow:hidden; }
+.photoNews .top_photo a::after { position:absolute; left:0px; bottom:0px; width:242px; height:24px; line-height:24px; color:#FFF; font-size:12px; font-weight:bold; text-align:center; background-color:rgba(0,0,0,0.7); content:"너무 예쁜 그녀들"; }
+.photoNews .top_photo a img { width:100%; height:100%; }
+
+.thumbNews { position:relative; width:242px; margin-top:10px; }
+.thumbNews li { height:52px; margin-top:5px; }
+.thumbNews li:first-child { margin-top:0px; }
+.thumbNews li a { display:table; }
+.thumbNews li a .thumb { float:left; display:block; width:52px; height:52px; overflow:hidden; }
+.thumbNews li a .thumb img { width:100%; height:100%; }
+.thumbNews li a .thumb_title { display:table-cell; padding:0px 10px; width:170px; font-size:14px; vertical-align:middle; line-height:18px; }
+.thumbNews li a:hover { color:#e43812; }
+.thumbNews::after { position:absolute; right:0px; top:0px; width:1px; height:100%; background-color:#ccc; content:""; }
+
+.newsList { width:277px; height:78px; margin:0px 12px 0px 254px; border-bottom:2px solid #edb49e; }
+
+.topNews { height:80px; }
+.topNews li { width:267px; height:22px; line-height:22px; padding-left:10px; background:url("http://static.naver.net/newsstand/2016/1117/seoul/153201/014.gif") no-repeat 0 7px; font-size:12px; }
+.topNews li a:hover { color:#e43812; }
+
+.mainNews { height:267px; }
+.mainNews li { width:270px; height:22px; padding:4px 0px 4px 7px; background:url("http://static.naver.net/newsstand/2016/1117/seoul/162852/016.gif") no-repeat center left; font-size:14px; font-weight:bold; letter-spacing:-1px; line-height:22px; overflow:hidden; }
+.mainNews li a:hover { color: #e43812; }
+
+/* right news */
+
+
+/* 이미지 버튼 */
+.headBtn { display:block; height:22px; background:url("../images/sp_nwstd.png") no-repeat; vertical-align:middle; }
+.read { width:66px; background-position:-187px -199px; }
+.user { width:77px; background-position:-293px -174px; }
+.share { width:28px; background-position:-500px -270px; }
+.only { display:inline-block; width:36px; height:16px; background:url("http://static.naver.net/newsstand/2016/1117/seoul/162852/005.gif") no-repeat; vertical-align:-3px; margin-right:3px; }
+
+.orange { color:#d2440c; }
+</style>
+</head>
+<body>
+
+<div id="wrap">
+    <!-- header -->
+    <div id="header">
+        <h1><a href=""><img src="http://static.naver.net/newsstand/up/2013/0813/nsd113559563.gif" alt="서울신문" /></a></h1>
+        <ul>
+            <li><a href="" class="headBtn read"></a></li>
+            <li><a href="" class="headBtn user"></a></li>
+            <li><a href="" class="headBtn share"></a></li>
+            <li><span>11-17 14:11편집</span></li>
+        </ul>
+        <div class="banner"><a href=""><img src="http://adcreative.naver.com/ad3/1004/1004874/468_60_01473227375503.jpg" alt="배너" /></a></div>
+    </div>
+
+    <!-- contents -->
+    <div id="contents">
+        <!-- left news -->
+        <div class="leftNews">
+            <h2><a href="">朴대통령, 최순실 ‘공범’으로 19·20일 조사 가능성</a></h2>
+            <div class="photoNews">
+                <div class="top_photo">
+                    <a href="">
+                        <img src="http://static.naver.net/newsstand/2016/1117/seoul/152557/001.jpg" alt="수지" />
+                    </a>
+                </div>
+                <ul class="thumbNews">
+                    <li>
+                        <a href="">
+                            <span class="thumb"><img src="http://static.naver.net/newsstand/2016/1117/seoul/153201/002.jpg" alt="썸네일 뉴스" /></span>
+                            <span class="thumb_title">길라임 용문신, 알고 보니<br />미르재단 로고와 비슷?</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="thumb"><img src="http://static.naver.net/newsstand/2016/1117/seoul/153201/003.jpg" alt="썸네일 뉴스" /></span>
+                            <span class="thumb_title">최순실 관련 없다더니..<br />YG, 1000억원대 수익</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="thumb"><img src="http://static.naver.net/newsstand/2016/1117/seoul/153201/004.jpg" alt="썸네일 뉴스" /></span>
+                            <span class="thumb_title">‘진짜 길라임’ 입 열었다<br />“한제인은 쓰지 말길”</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="newsList">
+                <div class="topNews">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span class="topList_icon"></span>문재인 ‘엘시티 연루설’ 유포자 명예훼손 고소
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="topList_icon"></span>황상민 “朴대통령 정신 연령, 발달장애 상태”
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="topList_icon"></span>“촛불 결국 바람 불면 다 꺼진다”는 김진태
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="mainNews">
+                    <li><a href="" class="orange">세월호 참사 당일, 간호장교 청와대 출장 기록</a></li>
+                    <li><a href="">조응천 “박 대통령 엘시티 언급은 판 엎을 꼼수”</a></li>
+                    <li><a href="">조양호 회장 ‘박근혜 진돗개’ 때문에 해외출장</a></li>
+                    <li><a href="" class="orange">촛불집회에서 헌팅을 한다고? 실상 보니 ‘소름’</a></li>
+                    <li><a href="">세월호 7시간 대통령 뭐했길래…방송서 묵음처리</a></li>
+                    <li><a href=""><span class="only"></span>한 경찰서에서 4명 잇단 사망…왜?</a></li>
+                    <li><a href="">정홍원 “대통령이 너무 많이 알고 있다는 느낌 받</a></li>
+                    <li><a href="">JP “박근혜, 최태민과 방에 들어가면 안나와”</a></li>
+                    <li><a href="">5살 트럼프 외손녀 때문에 난리난 중국</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- //left news -->
+
+        <!-- right news -->
+        <div class="rightNews">
+            <ul class="photoList">
+                <li>
+                    <a href="">
+                        <span class="thumb"><img src="http://static.naver.net/newsstand/2016/1117/seoul/162852/006.jpg" alt="포토리스트 썸네일"></span>
+                        <span>래쉬가드 진수를 보여줘</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="thumb"><img src="http://static.naver.net/newsstand/2016/1117/seoul/171049/007.jpg" alt="포토리스트 썸네일"></span>
+                        <span>표범 덮친 사자의 결말</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="thumb">
+                            <span class="btn_play"></span>
+                            <img src="http://static.naver.net/newsstand/2016/1117/seoul/171049/008.jpg" alt="포토리스트 썸네일">
+                        </span>
+                        <span>보고 또 봐도 웃긴 사진들</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="thumb">
+                            <span class="btn_play"></span>
+                            <img src="http://static.naver.net/newsstand/2016/1117/seoul/171049/010.jpg" alt="포토리스트 썸네일">
+                        </span>
+                        <span>상어에 몰려든 물고기떼</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="photoCard">
+                <li>
+                    <a href="">
+                        <span class="thumb"><img src="http://static.naver.net/newsstand/2016/1117/seoul/171049/011.jpg" alt="포토카드 썸네일"></span>
+                        <span>2750년 대한민국이 사라진다</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="thumb"><img src="http://static.naver.net/newsstand/2016/1117/seoul/171049/012.jpg" alt="포토카드 썸네일"></span>
+                        <span>레이싱 모델들 청바지 뒤태</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="thumb">
+                            <span class="btn_play"></span>
+                            <img src="http://static.naver.net/newsstand/2016/1117/seoul/171049/013.jpg" alt="포토카드 썸네일">
+                        </span>
+                        <span>앞발로 강아지 쓰다듬는 북극곰</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- right news -->
+<style>
+.rightNews { margin-left:543px; width:297px; overflow:hidden; }
+
+.photoList { height:244px; }
+.photoList li { float:left; width:135px; height:115px; font-size:12px; letter-spacing:-0.8px; margin-left:7px; margin-bottom:7px; }
+.photoList li .thumb { position:relative; display:block; width:135px; height:90px; overflow:hidden; }
+.photoList li .thumb img { width:100%; height:100%; }
+.photoList li .thumb+span  { height:25px; line-height:25px; }
+.photoList li a:hover { color: #e43812; }
+
+.photoCard { height:136px; }
+.photoCard li { float:left; width:87px; margin-left:7px; padding-top:7px; height:;  }
+.photoCard li .thumb { position:relative; display:block; width:87px; height:87px; }
+.photoCard li .thumb img { width:100%; height:100%; }
+.photoCard li .thumb+span { height:24px; font-size:11px; }
+.photoCard li a:hover { color: #e43812; }
+
+/* 아이콘 */
+.btn_play { position:absolute; left:6px; bottom:6px; display:block; width:24px; height:24px; background:url("http://static.naver.net/newsstand/2016/1117/seoul/171049/009.png") no-repeat; }
+</style>
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>

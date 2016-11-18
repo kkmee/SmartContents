@@ -22,18 +22,17 @@
         <li>
             <label for="userid">회원 아이디</label>
             <input type="text" name="userid" id="userid" value="" placeholder="아이디를 입력하세요" />
-            <label for="userid_confirm">아이디 중복조회</label>
-            <input type="button" name="userid_confirm" id="userid_confirm" value="아이디 중복조회" />
+            <input type="button" name="userid_confirm" id="userid_confirm" value="아이디 중복조회" /> <!-- button에는 굳이 label 안써도 됨 -->
             <span>(영문자 또는 숫자, 4~15자리)</span>
         </li>
         <li>
-            <label for="userpassword">비밀번호</label>
-            <input type="password" name="userpassword" id="userpassword" placeholder="비밀번호를 입력하세요" />
+            <label for="userpw">비밀번호</label>
+            <input type="password" name="userpw" id="userpw" placeholder="비밀번호를 입력하세요" />
             <span>변경 시에만 입력하십시오. (영문자 또는 숫자, 4~12자리)</span>
         </li>
         <li>
-            <label for="userpassword_confirm">비밀번호 확인</label>
-            <input type="password" name="userpassword_confirm" id="userpassword_confirm" placeholder="비밀번호를 확인하세요" />
+            <label for="userpw_confirm">비밀번호 확인</label>
+            <input type="password" name="userpw_confirm" id="userpw_confirm" placeholder="비밀번호를 확인하세요" />
         </li>
         <li>
             <label for="username">회원성명</label>
@@ -42,32 +41,41 @@
         </li>
         <li>
             <label for="usernum">주민등록번호</label>
-            <input type="text" name="usernum" id="usernum" value="" /> - <input type="password" name="" />
+            <input type="text" name="usernum_first" id="usernum_first" value="" />
+            <span>-</span>
+            <label for="usernum_last">
+            <input type="password" name="usernum_last" id="usernum_last" />
+            </label>
         </li>
         <li>
-            <label for="num">전화번호</label>
-            <select id="num" name="num_first">
+            <label for="num_first">전화번호</label>
+            <select id="num_first" name="num_first">
                 <option>지역번호 선택</option>
                 <option>02</option>
                 <option>032</option>
-            </select> -
-            <input type="text" name="num_middle" value="" /> -
-            <input type="text" name="num_end" value="" />
+            </select>
+            <span>-</span>
+            <label for="num_middle"><input type="text" name="num_middle" value="" /></label>
+            <span>-</span>
+            <label for="num_last"><input type="text" name="num_last" value="" /></label>
         </li>
         <li>
-            <label for="phone">휴대폰 번호</label>
-            <select id="phone" name="phone_first">
+            <label for="phone_first">휴대폰 번호</label>
+            <select id="phone_first" name="phone_first">
                 <option>선택</option>
                 <option>010</option>
                 <option>011</option>
-            </select> -
-            <input type="text" name="phone_middle" value="" /> -
-            <input type="text" name="phone_end" value="" />
+            </select>
+            <span>-</span>
+            <label for="phone_middle"></label>
+            <input type="text" name="phone_middle" value="" />
+            <span>-</span>
+            <label for="phone_last"></label>
+            <input type="text" name="phone_last" value="" />
         </li>
         <li>
             <label for="code">우편번호</label>
             <input type="text" name="code" id="code" value="" /> - <input type="text" name="" value="" />
-            <label for="search">우편번호 검색</label>
             <input type="button" name="search" id="search" value="우편번호 검색" />
             <br />
             <label for="address">주소입력</label>
@@ -86,8 +94,9 @@
             </select>
         </li>
         <li>
-            <label for="cc_email">참조 E-mail</label>
-            <input type="text" name="cc_email_id" id="cc_email" /> @
+            <label for="cc_email_id">참조 E-mail</label>
+            <input type="text" name="cc_email_id" id="cc_email" />
+            <span>@</span>
             <select name="cc_email_domain">
                 <option>선택</option>
                 <option>naver.com</option>
@@ -101,7 +110,7 @@
             </p>
         </li>
         <li>
-            부가서비스 안내수신
+            <label for="yes">부가서비스 안내수신</label>
             <label for="yes">예</label>
             <input type="radio" id="yes" name="trans" />
             <label for="no">아니오</label>
@@ -113,9 +122,10 @@
         </li>
     </ul>
 
-<input type="submit" value="확인" />
-<input type="reset" value="재입력" />
-
+    <p>
+        <input type="submit" value="확인" />
+        <input type="reset" value="재입력" />
+    </p>
 
 </form>
 

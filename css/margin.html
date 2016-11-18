@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>margin</title>
+<style>
+#box { width: 100px; height: 100px; border:1px solid red; }
+p { border:1px solid green; margin:20px 0px; } /* (형제간의) 마진 겹침 현상, 좌/우로는 상관없고 상/하는 겹친다. 높은값을 따라간다 */
+
+#wrap {  }
+#contents { border:1px solid blue; margin-top:100px; } /* (부모자식간의) 마진 겹침 현상, 부모에게 margin값을 주지 않으면 부모는 자식을 따라간다 */
+</style>
+</head>
+<body>
+
+<p>hello world</p>
+<p>hello world</p>
+<p>hello world</p>
+<p>hello world</p>
+
+
+<div id="box"></div>
+
+<div id="wrap">
+    <div id="contents">꾸꾸꾸꾸꾸꾺뀨뀨뀪꾸꾸꾸뀨뀨뀨뀨뀩</div>
+</div>
+
+
+
+
+
+</body>
+</html>
