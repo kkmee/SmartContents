@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+body, html { margin:0px; padding:0px; }
+
+.wrap { width:800px; height:800px; }
+.wrap div { outline:1px solid #000 }
+
+
+.up { height:500px; }
+.down { height:300px; }
+
+.up_leftbox { float:left; width:160px; }
+.up_leftbox > div { height:100px; }
+.up_leftbox div + div { height:400px; }
+.up_rightbox { margin-left:160px; height:100%; }
+
+.down_leftbox { float:left; }
+.down_leftbox > div { float:left; width:160px; height:300px; }
+.down_leftbox > div + div { float:left; width:540px; height:300px; }
+.down_rightbox { margin-left:700px; }
+.down_rightbox > div { height:110px; }
+.down_rightbox div + div { height:190px; }
+
+
+</style>
+</head>
+<body>
+
+
+<div class="wrap" style="display:none">
+    <div class="up">
+        <div class="up_leftbox">
+            <div>1</div>
+            <div>2</div>
+        </div>
+        <div class="up_rightbox">3</div>
+    </div>
+    <div class="down">
+        <div class="down_leftbox">
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <div class="down_rightbox">
+            <div>6</div>
+            <div>7</div>
+        </div>
+    </div>
+</div>
+
+
+<!--  -->
+<div class="mondrian_wrapper">
+    <div class="first_child"><a href="">text</a></div>
+    <div class="soul_child"><a href="">text</a></div>
+    <div class="moon_child"><a href="">text</a></div>
+    <div class="sun_child"><a href="">text</a></div>
+    <div class="star_child"><a href="">text</a></div>
+    <div class="earth_child"><a href="">text</a></div>
+    <div class="space_child"><a href="">text</a></div>
+</div>
+
+<style>
+.mondrian_wrapper { width:500px; height:500px; position: relative; background:#000; }
+a { display:block; color:#000; text-decoration:none; }
+a:hover { background:red; color:#FFF; transition:0.6s; }
+
+[class$="child"]{position:absolute; background:#FFF; text-align:center; font-size:24px; }
+.first_child{width:100px; height:100px; left:10px; top:10px; line-height:100px; }
+.first_child a:hover { transform:rotate(360deg); }
+.soul_child{width:100px; height:200px; top:120px; left:10px; line-height:200px;}
+.soul_child a:hover { transform:rotateX(360deg) }
+.moon_child{width:370px; height:310px; top:10px; right:10px; line-height:310px;}
+.moon_child a:hover { transform:rotateY(360deg) }
+.sun_child{width:100px; height:160px; bottom:10px; left:10px; line-height:160px;}
+.star_child{width:260px; height:160px; bottom:10px; left:120px; line-height:160px;}
+.earth_child {width:100px; height:70px; bottom:100px; right:10px;line-height:70px; }
+.space_child{width:100px; height:80px; bottom:10px; right:10px; line-height:80px;}
+</style>
+
+
+
+</body>
+</html>
