@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> new document </title>
+<meta charset="utf-8">
+<style>
+body, html { margin:0px; padding:0px; font-family:"NanumGothic"; }
+a { color:#000; text-decoration:none; }
+
+
+
+.button { position:relative; display:block; width:300px; height:100px; line-height:100px; text-align:center; border:1px solid #000; background:#ddd; font-size:16px; outline:none; }
+.button:hover { background:#888; color:#FFF; transition:0.6s; }
+
+.layer span { font-size:0px; }
+.layer .close { font-size:0px; }
+.layer:target { position:absolute; left:320px; top:0px; width:300px; height:300px; border:1px dashed #000; animation:myani 3s;}
+.layer:target span { display:block; line-height:300px; text-align:center; font-size:16px; }
+.layer:target .close { position:absolute; right:-42px; top:-1px; display:block; width:40px; height:30px; line-height:30px; border:1px solid #000; font-size:12px; text-align:center; }
+.layer:target .close:hover { background:#000; color:#FFF; transition:0.8s; transform:rotateY(360deg); }
+.layer:target .close:target { animation:myani_close 3s; }
+
+@keyframes myani {
+0% {left:0; top:0;}
+20% {left:320px; top:0; transform:rotateX(360deg); background:pink; }
+50% {left:320px; top:0px; transform:rotateY(360deg); background:purple; }
+70% {left:320px; top:0px; transform:skew(2,2); background:skyblue; border-radius:300px; }
+100% {left:320px; top:0px; background:lightgray; }
+}
+@keyframes myani_close {
+0% {left:0; top:0;}
+20% {left:320px; top:0; transform:rotateX(360deg); background:pink; }
+50% {left:320px; top:0px; transform:rotateY(360deg); background:purple; }
+70% {left:320px; top:0px; transform:skew(2,2); background:skyblue; border-radius:300px; }
+100% {left:320px; top:0px; background:lightgray; }
+}
+</style>
+</head>
+
+<body>
+
+
+
+<a class="button" id="close" href="#layer">버튼</a>
+<div class="layer" id="layer">
+    <span>내용입니다</span>
+    <a class="close" href="#close">닫기</a>
+</div>
+
+
+
+
+
+</body>
+</html>

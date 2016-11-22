@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+body { margin:0px; padding:0px; }
+a { color:#000; text-decoration:none; }
+
+/* hover 값 */
+.button:hover { background:#444; color:#FFF; }
+.close:hover { background:#000; color:#FFF; }
+
+
+.button { display:block; width:100px; height:80px; border:1px dashed #000; backgrond:#EEE; text-align:center; line-height:80px; font-size:16px; }
+.box { position:absolute; left:50%; top:-60%; margin-left:-250px; width:500px; height:500px; border:1px solid #000; }
+.close { position:absolute; right:-42px; top:-1px; display:block; width:40px; height:30px; line-height:30px; text-align:center; font-size:12px; border:1px solid #000; }
+
+.box:target { animation:open 1s both; }
+#btn:target + .box { animation:close 1s both; }
+
+@keyframes open {
+    from { left:50%; top:-60%; margin-left:-250px; }
+    to { top:50%; margin-top:-250px; }
+}
+@keyframes close {
+    from { top:50%; margin-top:-250px; }
+    to { left:50%; top:-60%; margin-left:-250px; }
+}
+
+</style>
+</head>
+<body>
+
+
+
+<a id="btn" class="button" href="#popup">버튼</a>
+<div id="popup" class="box">
+    <a class="close" href="#btn">닫기</a>
+</div>
+
+
+
+</body>
+</html>
