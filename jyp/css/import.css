@@ -1,0 +1,94 @@
+html,
+body {
+  height: 100%;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  margin: 0px;
+  background-image: url("../images/bg-pc.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center 0;
+}
+body header {
+  position: relative;
+  min-height: 100px;
+  height: 43px;
+  padding: 0px 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.4);
+}
+body header h1 {
+  float: left;
+}
+body header h1 a {
+  display: block;
+  width: 104px;
+  height: 52px;
+  padding: 24px;
+  background: url("../images/logo-s.png") no-repeat center;
+  transition: All 0.7s ease;
+  -webkit-transition: All 0.7s ease;
+}
+body header h1 a:hover {
+  transform: rotateY(180deg);
+  transition: 1.8s;
+}
+body header nav {
+  float: right;
+}
+body header nav li {
+  float: left;
+}
+body header nav li a {
+  position: relative;
+  display: block;
+  height: 100px;
+  line-height: 100px;
+  padding: 0px 18px;
+  font-size: 16px;
+  color: #F18195;
+  font-weight: bold;
+  letter-spacing: -0.4px;
+}
+body header nav li a:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #f4c22d;
+  transition: all 0.2s linear;
+}
+body header nav li a:hover:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 3px;
+  background-color: #F18195;
+}
+@media screen and (max-width: 769px) {
+  body {
+    background-image: url("../images/bg-720.jpg");
+    background-position: center;
+  }
+}
