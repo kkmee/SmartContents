@@ -1,7 +1,3 @@
-@jyplogo :"../images/jyplogo-b.png"
-
-// BG
-@pcBg:"../images/bg-pc.jpg";
 html,
 body {
   height: 100%;
@@ -29,7 +25,7 @@ p {
 body {
   position: relative;
   margin: 0px;
-  background-image: url("../images/bg-720.jpg");
+  background-image: url("../images/bg-pc.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
@@ -51,7 +47,9 @@ body header h1 a {
   width: 104px;
   height: 52px;
   padding: 24px;
-  background: url("../images/logo-s.png") no-repeat center;
+  background-image: url("../images/logo-s.png");
+  background-repeat: no-repeat;
+  background-position: center;
   transition: ease 0.7s;
   -webkit-transition: ease 0.7s;
   text-indent: -9999px;
@@ -85,12 +83,12 @@ body header nav li:hover {
 }
 body header nav li a {
   display: block;
-  padding: 0px 13px;
+  padding: 0px 16px;
   font-family: NanumGothic;
   font-size: 16px;
   color: #F18195;
   font-weight: bold;
-  letter-spacing: -0.8px;
+  letter-spacing: -1px;
   transition: linear 0.1s;
 }
 body header nav li a:hover {
@@ -104,6 +102,7 @@ body section .biglogo {
   width: 320px;
   height: 320px;
   background-image: url("../images/mainlogo.png");
+  -webkit-background-size: cover;
   background-size: cover;
   transition: 1s;
 }
@@ -116,12 +115,40 @@ body footer {
   bottom: 0px;
   width: 100%;
   height: 57px;
+  padding: 0px 60px;
+  box-sizing: border-box;
   background: rgba(0, 0, 0, 0.5);
 }
-body footer [class^="flaticon-"] {
+body footer h2 {
+  float: left;
+  padding: 6px 0px;
+}
+body footer h2 a {
+  display: block;
+  width: 115px;
+  height: 45px;
+  text-indent: -9999px;
+  font-size: 0px;
+  background-image: url("../images/jyplogo-b.png");
+}
+body footer section {
+  float: right;
+  padding-top: 14px;
+}
+body footer section [class^="flaticon-"] {
+  display: block;
+  float: left;
   width: 30px;
   height: 30px;
+  line-height: 30px;
   background: #e4e4e4;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-align: center;
+}
+body footer section [class^="flaticon-"]:hover {
+  background: #E8B81A;
+  transition: 0.4s;
 }
 @media screen and (max-width: 769px) {
   body {
