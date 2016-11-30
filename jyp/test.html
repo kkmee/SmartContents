@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body { margin:0px; padding:0px; }
+    a { color:#000; text-decoration:none; }
+    </style>
+</head>
+<body>
+
+<style>
+.wrap { max-width:1000px; width:85%; margin:50px auto 0px; }
+.wrap table { width:100%; border-collapse:collapse; border-top:1px solid #000; }
+.wrap td { border-bottom:1px solid #000; padding:14px 0px; /*height:17px;*/ font-size:13px; }
+.wrap td:nth-child(1) { width:70px; background:pink; }
+.wrap td:nth-child(2) { background:skyblue; max-width:0; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.wrap td:nth-child(3) { width:120px; background:yellowgreen; }
+
+@media screen and (max-width:480px) {
+    .wrap td:nth-child(1) { width:14%; }
+
+}
+</style>
+
+
+<div class="wrap">
+
+<table>
+    <colgroup>
+        <col />
+        <col />
+        <col />
+    </colgroup>
+    <tbody>
+        <tr>
+            <td>숫자</td>
+            <td><a href="">제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목</a></td>
+            <td>날짜</td>
+        </tr>
+        <tr>
+            <td>숫자</td>
+            <td>제목제목제목제목제목제목제목제목제목제목제목제목</td>
+            <td>날짜</td>
+        </tr>
+        <tr>
+            <td>숫자</td>
+            <td>제목제목제목제목제목제목제목제목제목제목제목제목</td>
+            <td>날짜</td>
+        </tr>
+    </tbody>
+</table>
+
+
+</div>
+
+
+</body>
+</html>

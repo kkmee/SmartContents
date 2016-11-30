@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script type="text/javascript">
+    //상수 = 변하지 않는 수
+
+    var x = 10;
+    x=x+20; // x+20=x 라고 써도 되는데 거꾸로 써도 컴퓨터는 x=x+20 이라고 읽는다
+    x+30;
+    console.log(x); // x는 30으로 나온다. 위에 x+30 이라고 썼지만 =을 안붙였기때문에. 대입한게 아니기 때문에 값이 포함되지 않는거.
+
+    // var x,y,z
+    // x=50;
+    // y=800;
+    // z=100;
+    // x=x/y;
+    // console.log(x*z)
+
+    var x,y,z
+    x = 50;
+    console.log(x,y,z);
+    y = 800;
+    console.log(x,y,z);
+    z = 100;
+    console.log(x,y,z);
+    x = x/y;
+    console.log(x,y,z);
+    z = "value :"+x*z;
+    console.log(z+20); //20값은 z값에 +20 더해지는게 아니라 단순히 뒤에 20이라고 붙는것이다.
+    //console.log("value:"+x*z); //문자+숫자=string(문자)
+
+    document.write(z+20);
+
+    console.log(typeof(x)); //숫자이기 때문에 Nember로 분류된다.
+    console.log(typeof(z)); //문자와 숫자가 합쳐진 것이기 때문에 string 으로 분류된다.
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

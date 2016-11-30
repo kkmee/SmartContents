@@ -1,0 +1,135 @@
+<script type="text/javascript">
+
+    // [] 이거 자체가 배열. [] 안에 [] 이 있는건 2차원 배열이라한다.
+    var arr = ["apple","banana","orange","pineapple"]; //0부터 시작된다.
+    console.log(arr[3],arr[1]);
+    console.log(arr[0],arr[2]);
+    console.log(arr); //전체 선택해줄때는 arr만 입력한다.
+    //document.write(arr[3]);
+
+
+    var arr2 = [
+                    ["apple0","banana0","orange0","pineapple0"],
+                    ["apple1","banana1","orange1","pineapple1"],
+                    ["apple2","banana2","orange2","pineapple2"],
+                    ["apple3","banana3","orange3","pineapple3"]
+                ];
+    //banana2 를 가져오려면,
+    console.log(arr2[2][1]);
+
+
+    arr[2] = "strawberry"; //4번째 줄의 arr변수에서 2번에 해당하는 orange를 strawberry로 바꾸겠다는 뜻
+    console.log(arr);
+
+
+
+
+
+    Math.random(); //난수/실수(소수점 숫자) 형태 생성. 0.XX으로 출력
+    Math.floor(); //절삭 (잘라주다,소수점 버림)
+    Math.floor(Math.random()*100);
+
+    var random=Math.random();
+    var random_number=Math.floor(random*100); //floor(random)에 범위를 정해주지 않으면 console에서는 0으로 뜬다.
+    Math.floor(Math.random()*100); //위의 함수와 똑같은 의미이다.
+    console.log(random_number);
+
+
+
+
+// 게임 만들기!
+// 신이 당신을 만들때
+// 만들 사람을 입력해주세요
+// 어디 한번 김경미를 만들어볼까
+// 확인을 누르면 만들어집니다.
+// 음.. 일단 어여쁨 한숟갈
+
+// var user = prompt("만들 사람을 입력해주세요.");
+// alert("어디 한번 "+user+" 만들어볼까?");
+// alert("확인을 누르면 만들어집니다.");
+//
+// var text1 = ["일단은","음....","어디보자","우어어어어","호오오오"];
+// var text2 = ["어여쁨","높은지능","낮은지능","먹성","귀여움","썩은인성","바른인성","D라인","O라인","S라인","빚","돈"];
+// var text3 = ["한숟깔","한방울","한가득","우오오오어ㅓㅇㄴ이ㅏ러ㅣㅏㅓㅎ","헉....","깜빡했다..","덜넣음"];
+//
+// var ran1 = Math.floor(Math.random()*text1.length); //length는 1부터 시작하고, 배열(array)은 0부터 시작한다. 배열 개수를 말한다. 즉, length는 1부터 시작하고, random()은 0부터 시작한다.
+// var ran2 = Math.floor(Math.random()*text2.length);
+// var ran3 = Math.floor(Math.random()*text3.length);
+//
+// console.log(user+"님..... "+text1[ran1]+" "+text2[ran2]+" "+text3[ran3]);
+// document.write(user+"님..... "+text1[ran1]+" "+text2[ran2]+" "+text3[ran3]); // 중간에 빈 따옴표는 띄어쓰기를 주기 위해 쓴 것.
+
+
+
+
+//응용
+    // var user = prompt("만들 사람을 입력해주세요.");
+    // var sex = prompt("성별이 무엇입니까?");
+    // var age = prompt("몇살입니까?");
+    //
+    // alert("어디 한번 "+age+"살 "+sex+" "+user+"를(을) 만들어볼까?");
+    // alert("확인을 누르면 만들어집니다.");
+    //
+    // var text1 = ["일단은","음....","어디보자","우어어어어","호오오오"];
+    // var text2 = ["어여쁨","높은지능","낮은지능","먹성","귀여움","썩은인성","바른인성","D라인","O라인","S라인","빚","돈"];
+    // var text3 = ["한숟깔","한방울","한가득","우오오오어ㅓㅇㄴ이ㅏ러ㅣㅏㅓㅎ","헉....","깜빡했다..","덜넣음"];
+    //
+    // var ran1 = Math.floor(Math.random()*text1.length);
+    // var ran2 = Math.floor(Math.random()*text2.length);
+    // var ran3 = Math.floor(Math.random()*text3.length);
+    //
+    // age = Number(age);
+    //
+    // console.log("name:"+typeof(user));
+    // console.log("sex:"+typeof(sex));
+    // console.log("age:"+typeof(age));
+    // console.log(age+"살"+sex+" "+user+"님..... "+text1[ran1]+" "+text2[ran2]+" "+text3[ran3]);
+    //
+    // document.write(age+"살"+" "+sex+" "+user+"님..... "+text1[ran1]+" "+text2[ran2]+" "+text3[ran3]);
+
+
+
+
+
+
+
+
+// console 분해해보기!!!!!
+
+// var text1 = ["일단은","음....","어디보자","우어어어어","호오오오"];
+// var ran1 = Math.floor(Math.random()*text1.length);
+// document.write(age+"살"+" "+sex+" "+user+"님..... "+text1[ran1]+" "+text2[ran2]+" "+text3[ran3]);
+
+
+//var text1 = ["일단은","음....","어디보자","우어어어어","호오오오"];
+// console.log("배열 목록:" + text1);
+//
+// var random_num = Math.random();
+// console.log("무작위수생성:"+random_num);
+//
+// var ranScope = random_num * text1.length;
+// console.log("배열의 총길이:"+text1.length);
+// console.log("무작위 정수변환"+ranScope)
+// var ran1 = Math.floor(ranScope);
+// console.log(ran1)
+// console.log(text1[ran1])
+//
+// document.write(user+"님......"+text1[ran1]+" "+text2[ran2]+" "+text3[ran3])
+
+
+// 2차원 배열 colsole 분해하기
+
+var text = [
+    ["일단은","음....","어디보자","우어어어어","호오오오"],
+    ["어여쁨","높은지능","낮은지능","먹성","귀여움","썩은인성","바른인성","D라인","O라인","S라인","빚","돈"],
+    ["한숟깔","한방울","한가득","우오오오어ㅓㅇㄴ이ㅏ러ㅣㅏㅓㅎ","헉....","깜빡했다..","덜넣음"]
+]
+
+var ran_1 = Math.floor(Math.random()*text[0].length);
+var ran_2 = Math.floor(Math.random()*text[1].length);
+var ran_3 = Math.floor(Math.random()*text[2].length);
+
+console.log(text[0][ran_1]+" / "+text[1][ran_2]+" / "+text[2][ran_3]);
+
+
+</script>

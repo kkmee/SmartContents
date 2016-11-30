@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<style>
+a { color:#000; text-decoration:none; }
+
+.menu { background:pink; width:100px; height:40px; display:block; font-size:14px; test-align:center; line-height:40px; }
+.layer { position:absolute; left:50%; margin-left:-250px; top:-80%; background:purple; width:500px; height:500px; }
+.close { position:absolute; right:-40px; top:0px; display:block; width:40px; height:30px; line-height:30px; text-align:center; font-size:12px; background:skyblue; }
+
+
+.layer:target { animation:open 1s both; }
+#close:target + .layer { animation:close 1s both; }
+
+@keyframes open {
+    from { top:-80%; }
+    to { top:50%; margin-top:-250px; }
+}
+@keyframes close {
+    from { top:50%; margin-top:-250px; }
+    to { top:-80%; }
+}
+</style>
+</head>
+<body>
+
+
+<a href="#box" id="close" class="menu">메뉴</a>
+<div id="box" class="layer">
+    <a href="#close" class="close">닫기</a>
+</div>
+
+
+</body>
+</html>

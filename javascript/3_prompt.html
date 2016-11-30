@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script type="text/javascript">
+
+    var name = prompt("you name?");
+    //console.log(name);
+    var year = prompt("몇년생이야?"); //prompt에 숫자를 넣어도 문자로 인식한다
+
+    year=Number(year); //string을 number로 바꿔주는 것. 반대로, 숫자를 문자열로 나타낼땐 year=String(year);
+
+    console.log("name:"+typeof(name)); //typeof는 그 속성이 문자냐, 숫자냐 알려주는것. console에서만 쓰이는 것은 아니다.
+    console.log("year:"+typeof(year));
+    console.log("name :"+name+"<br />year :"+year);
+
+    document.write("name :"+name+"<br />year :"+(year+1900));
+
+
+</script>
+</head>
+<body>
+
+
+
+
+
+
+</body>
+</html>
