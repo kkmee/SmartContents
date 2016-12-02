@@ -1,0 +1,28 @@
+<script type="text/javascript">
+
+// 범위 정해주고, 숫자가 랜덤으로 돌리겠금 하고, 몇번 할건지 정하고, 출력
+
+var numScope = 50;
+var numrandom = Math.random()*50;
+var numran = Math.floor(numrandom);
+var count = 1;
+
+for(i=0; i<count; i++) {
+    var text = prompt("숫자를 입력해라");
+    console.log(numran);
+    if(text > numran) {
+        alert("DOWN !!!!!");
+    }else if(text < numran) {
+        alert("UP !!!!!");
+    }else if(text = numran) {
+        alert("oh ~~~~~~~~");
+        break;
+    }
+}
+
+
+
+
+
+
+</script>

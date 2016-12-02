@@ -1,0 +1,65 @@
+<script type="text/javascript">
+
+/*
+0. 총 학생의 수를 입력한다
+1. 학생 이름을 입력한다
+2. 학생의 점수를 입력한다
+3. 전체 학생의 평균 점슈를 낸다.
+4. 평균 점수의 등급을 출력한다.
+*/
+
+
+var nameArr = []; // var 변수명 = new Array(); 라고 해도 된다. 2차원 배열로 해도 된다.
+var scoreArr = []; //배열을 담을 공간을 만들어준 것.
+
+var max_user = prompt("학생 수를 입력하세요.");
+var check = confirm(max_user+"명이 맞습니까?"); //확인창 출력
+
+if(check) {
+    for(i=0; i<max_user; i++) {
+        var name = prompt("이름을 입력하세요");
+        nameArr.unshift(name); //nameArr.unshift(prompt("이름을 입력하세요.")); 라고 써도 된다.
+        //unshift는 위에 써준 배열(array)에 내용을 입력해줄때 써주는 것. 쓴 순서대로 뒤로 점점 밀린다. 마지막으로 쓴게 가장 앞으로 온다.
+        //unshift의 반대는 push. 쓴 순서대로 나열된다. 마지막에 입력된 것은 마지막에 출력된다.
+        var score = prompt("점수를 입력하세요");
+        scoreArr.unshift(score); //scoreArr.unshift(prompt("점수를 입력하세요.")); 라고 써도 된다.
+    }
+    console.log(nameArr,scoreArr);
+    document.write(nameArr+"<br />"+scoreArr);
+
+
+    var nexts = confirm("입력정보가 맞습니까?");
+    if(nexts) {
+        console.log("반 전체 평균을 산출합니다.");
+        var score = 0;
+        for(var j=0; j<scoreArr.length; j++) { // for(var j = 0 in scoreArr)
+            score += Number(scoreArr[j]);
+        }
+        console.log("total :"+score);
+        console.log("평균 :"+score/nameArr.length);
+        var avg = score/nameArr.length;
+        document.write("반 전체 평균은 "+ avg +"점 입니다.");
+
+        if(avg>=0 && avg<20) {
+            document.write("가");
+        }else if(avg>=20 && avg<40) {
+            document.write("양");
+        }else if(avg>=40 && avg<60) {
+            document.write("미");
+        }else if(avg>=60 && avg<80) {
+            document.write("우");
+        }else if(avg>=80 && avg<=100) {
+            document.write("수");
+        }
+
+
+    }else if(!nexts) {
+        alert("프로그램을 종료합니다.");
+    }
+
+}else if(!check) {
+    console.log("re");
+}
+
+
+</script>

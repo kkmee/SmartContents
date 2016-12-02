@@ -1,0 +1,28 @@
+<script type="text/javascript">
+
+//범위 정하기 -> 몇판할건지 정하기 -> 조건문 작성하기
+
+var numberScope = 100; //범위 정하기
+var randomNum = Math.random() * 100; //정한 범위를 랜덤으로 돌려주기. Math.random()은 소수점으로 출력한다.
+var ranNum = Math.floor(randomNum); //소수점으로 나온 값을 잘라주기
+//var count = 10; //몇 번 할껀지 설정하기
+var count = prompt("몇 번 할껀지 설정하세요!"); //카운트를 내가 설정할 수도 있다. prompt로 바꿀때는 아래 for문에 조건도 바꿔준다.
+
+for(i=0; i<count; i++) { //숫자는 0부터 시작하고, 6번까지 할거고, 한번할떄마다 한번씩 증가된다
+    var entry = prompt("숫자를 입력해~");
+    console.log(ranNum); //랜덤숫자가 뭐가 나왔는지 미리 보기위해 console 적음
+    if(ranNum > entry) {
+        alert("UP!");
+    }else if(ranNum < entry) {
+        alert("DOWN");
+    }else if(ranNum == entry) {
+        alert("Oh~~!!!!!!");
+        break;
+    }
+}
+
+
+
+
+
+</script>

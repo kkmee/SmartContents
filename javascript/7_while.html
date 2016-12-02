@@ -1,0 +1,30 @@
+<script type="text/javascript">
+//while은 간결하지만 많이 안쓰인다. for를 더 쓴다. while 루프가 잘 돈다. 증감연산자를 꼭 넣는다. 자칫하면 무한반복되서 컴퓨터 다운됨. while문이 할 수 있는 것을 for문이 할 수 있다. while은 체계적이지 않다.
+
+
+//구구단 만들기
+var i = 0;
+while(i<10) {
+    console.log(i+"단");
+    var j = 0;
+    while(j<9) {
+        console.log(i+"X"+j+"="+i*j);
+        j++;
+    }
+    i++;
+}
+
+
+/* for와 비교해볼것
+for(var i=0; i<=9; i++) {
+    console.log(i+"단");
+    for(var j=0; j<=9; j++) {
+        console.log(i+"X"+j+"="+i*j);
+    }
+}
+*/
+
+
+
+
+</script>

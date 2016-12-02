@@ -62,7 +62,7 @@
 
 
 
-//응용
+//사람 만들기 응용
     // var user = prompt("만들 사람을 입력해주세요.");
     // var sex = prompt("성별이 무엇입니까?");
     // var age = prompt("몇살입니까?");
@@ -117,8 +117,10 @@
 // document.write(user+"님......"+text1[ran1]+" "+text2[ran2]+" "+text3[ran3])
 
 
-// 2차원 배열 colsole 분해하기
 
+
+
+// 2차원 배열 colsole 분해하기
 var text = [
     ["일단은","음....","어디보자","우어어어어","호오오오"],
     ["어여쁨","높은지능","낮은지능","먹성","귀여움","썩은인성","바른인성","D라인","O라인","S라인","빚","돈"],
@@ -130,6 +132,39 @@ var ran_2 = Math.floor(Math.random()*text[1].length);
 var ran_3 = Math.floor(Math.random()*text[2].length);
 
 console.log(text[0][ran_1]+" / "+text[1][ran_2]+" / "+text[2][ran_3]);
+
+
+
+
+//for문을 사용하여 위의 구문을 한줄로 줄여보기
+for(var i=0; i<text.length; i++){
+    console.log(Math.floor(Math.random() * text[i].length));
+}
+//i<text.length를 쓴 이유는, 배열갯수를 직접 지정해주다가 나중에 배열이 늘어나면, 하나하나 다 세야되는 번거로움을 줄이기위해 ".length"를 씀으로써 모든 배열갯수를 알아서 세어주게한다.
+
+for(var i=0; i<text.length; i++) {
+    var randoms = Math.floor(Math.random() * text[i].length);
+    //긴 문장을 하나의 변수를 생성하여 묶어주고, 아래에 대입. (CSS로 따지면, 반복적으로 들어가는 공통된 스타일을 하나의 클래스로 스타일을 만들어주는 꼴)
+    console.log(text[i][randoms]);
+}
+
+
+var html = ""; //임의의 변수를 만들어준다. 빈 공간
+for(i=0;i<text.length;i++){
+    var randoms = Math.floor(Math.random() * text[i].length);
+    html += text[i][randoms]+"";
+    console.log(html)
+}
+
+
+var html = "";
+for(i=0;i<text.length;i++){
+    var randoms = Math.floor(Math.random() * text[i].length);
+    html += text[i][randoms]+" ";
+}
+
+document.write(html)
+
 
 
 </script>
