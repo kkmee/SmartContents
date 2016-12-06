@@ -28,7 +28,7 @@ function addUser(){
 function cardMake() {
     cardeck=[];
     for(i=0; i<4; i++) {
-        for(j=1; j<=13; j++) {
+        for(j=1; j<=13; j++) { //왜 13이냐면 13개씩 4번 반복하면 52장. 카드게임은 52장의 카드로 하는거니까
             cardeck.push(cardModel[i]+j);
         }
     }

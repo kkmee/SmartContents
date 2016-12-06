@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script type="text/javascript">
+
+
+var card = {
+    card_number: 13,
+    card_case: [],
+    shape: ['♠','♣','♥','◆'],
+    theorem:function() { // theorem는 정리라는 뜻. 구글 사전에 그렇게 나와서...
+        for(var i=0 in this.shape) { // for in은 배열문에서만 쓸 수 있다. this.shape 말고 card.shape로 해도 된다.
+            console.log(i);
+            for(var j=0; j < this.card_number; j++) {
+                console.log(j);
+            }
+        }
+    }
+}
+
+
+
+
+</script>
+</head>
+<body>
+
+
+<button type="button" onclick="card.theorem()">카드생성</button>
+
+
+
+
+</body>
+</html>

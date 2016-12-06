@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script type="text/javascript">
+
+// part.1
+var obj = {name:"김경미",gender:"woman"}
+var consolex = {
+    logx:function(x){
+        alert('왜!!!')
+    }
+}
+console.log(consolex.logx())
+
+
+
+
+// part.2 : 이 문법에 익숙해져야된다. jason(제이슨) 사용할 때 필요함.
+var obj = {
+    history: {
+        school:"하이초등학교"
+    }, //객체 안에 또 객체를 넣을 수 있다.
+    name: "김경미", //name, gender~ 이런거는 지시자라고 한다
+    gender: "woman",
+    year: 27,
+    skill: ['HTML','CSS','Javascript','Javascript Core','Javascript DOM','LESS','Git','photoshop','jQuery','IA','WBS','RFP','NodeJs','Responsive','Accessbility'],
+    content:function() {
+        document.write(this.name+'"나에 의한, 나를 위한, 나의 자리를 만들어 주십시오!!!"') // this는 obj라는 객체를 뜻한다. 앞에 있는 변수를 뜻한다. 타고 들어가기 귀찮고 할때 변수명을 적는거 말고도 그냥 this 라고 해도 된다.
+        console.log(name+'"나에 의한, 나를 위한, 나의 자리를 만들어 주십시오!!!"');
+    }
+}
+console.log(obj.name);
+console.log(obj.content());
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

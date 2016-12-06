@@ -1,0 +1,105 @@
+<script type="text/javascript">
+
+
+var arr1 = ["apple", "banana", "melon", "grape", "orange"];
+console.log(arr1[3]);
+console.log(arr1[0],arr1[2]);
+
+var arr2 = [
+    ["a","b","c","d","e"],
+    ["aa","bb","cc","dd","ee"],
+    ["aaa","bbb","ccc","ddd","eee"],
+]
+console.log(arr2[0][2],arr2[2][3]);
+console.log(arr2);
+arr2[2][4] = "eeeeeeeeeeeeeeeeeee";
+console.log(arr2[2][4]);
+
+var random = Math.floor(Math.random()*100);
+console.log(random);
+
+
+// 게임 만들기! - 신이 당신을 만들때
+// 만들 사람 이름/성별/나이를 입력해주세요
+// 어디 한번 김경미를 만들어볼까
+// 확인을 누르면 만들어집니다.
+// 음.. 일단 어여쁨 한숟갈
+
+/*
+var name = prompt("이름을 입력해주세요.");
+var gender = prompt("성별을 입력해주세요");
+var age = prompt("나이를 입력해주세요.");
+
+alert("자! 이제부터 "+age+"살 "+gender+" "+name+"을(를) 만들어볼까?");
+
+var text1 = ["일단은","음....","어디보자","우어어어어","호오오오"];
+var text2 = ["어여쁨","높은지능","낮은지능","먹성","귀여움","썩은인성","바른인성","D라인","O라인","S라인","빚","돈"];
+var text3 = ["한숟깔","한방울","한가득","우오오오어ㅓㅇㄴ이ㅏ러ㅣㅏㅓㅎ","헉....","깜빡했다..","덜넣음"];
+
+var ran1 = Math.floor(Math.random()*text1.length);
+var ran2 = Math.floor(Math.random()*text2.length);
+var ran3 = Math.floor(Math.random()*text3.length);
+
+console.log(name+"님... "+text1[ran1]+" "+text2[ran2]+" "+text3[ran3]);
+*/
+
+/*
+var name = prompt("이름을 입력해주세요.");
+var gender = prompt("성별을 입력해주세요");
+var age = prompt("나이를 입력해주세요.");
+
+alert("자! 이제부터 "+age+"살 "+gender+" "+name+"을(를) 만들어볼까?");
+
+var text = [
+    ["일단은","음....","어디보자","우어어어어","호오오오"],
+    ["어여쁨","높은지능","낮은지능","먹성","귀여움","썩은인성","바른인성","D라인","O라인","S라인","빚","돈"],
+    ["한숟깔","한방울","한가득","우오오오어ㅓㅇㄴ이ㅏ러ㅣㅏㅓㅎ","헉....","깜빡했다..","덜넣음"]
+]
+
+var ran1 = Math.floor(Math.random()*text[0].length);
+var ran2 = Math.floor(Math.random()*text[1].length);
+var ran3 = Math.floor(Math.random()*text[2].length);
+
+console.log(name+"님.... "+text[0][ran1]+" "+text[1][ran2]+" "+text[2][ran3]);
+*/
+
+var arr3 = ["기차","버스","택시","지하철","자가용"]
+console.log(arr3[2]);
+
+var arr4 = [
+    ["기차","버스","택시","지하철","자가용"],
+    ["기차역","버스정류장","택시승강장","지하철승강장","주차장"],
+    ["칙칙폭폭","붕붕","빵빵","덜컹덜컹","붕어빵"]
+]
+console.log(arr4[0][2],arr4[1][3],arr4[2][4]);
+arr4[2][4] = "슈크림붕어빵";
+console.log(arr4);
+
+
+var name = prompt("이름을 입력하세요");
+var age = prompt("나이를 입력하세요");
+var gender = prompt("성별을 입력하세요");
+
+var text = [
+    ["일단은","음....","어디보자","우어어어어","호오오오"],
+    ["어여쁨","높은지능","낮은지능","먹성","귀여움","썩은인성","바른인성","D라인","O라인","S라인","빚","돈"],
+    ["한숟깔","한방울","한가득","우오오오어ㅓㅇㄴ이ㅏ러ㅣㅏㅓㅎ","헉....","깜빡했다..","덜넣음"]
+]
+
+var ran1 = Math.floor(Math.random()*text[0].length);
+var ran2 = Math.floor(Math.random()*text[1].length);
+var ran3 = Math.floor(Math.random()*text[2].length);
+
+console.log(age+"살의 "+gender+" "+name+"님.... "+text[0][ran1]+text[1][ran2]+text[2][ran3]);
+
+var html = "";
+for(var i=0; i<text.length; i++) {
+    var randoms = Math.floor(Math.random()*text[i].length);
+    html+=text[i][randoms];
+    console.log(html);
+}
+console.log(html);
+
+
+
+</script>
