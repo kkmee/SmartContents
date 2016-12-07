@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+    console.log($('#wrap li:first').text());
+
+    // each를 사용하는 방법
+    $('#wrap li').each(function(i){
+        console.log($(this).text());
+        //console.log(i); 와 같은 꼴
+        //console.log($('#wrap li').text()); 와 같다
+        //색상을 주려면, console.log($(this).css('color','red'));
+    })
+
+    // for를 사용하는 방법
+    for(i=0; i<$('#wrap li').size(); i++) {
+        console.log($('#warp li:eq('+i+')').text());
+    }
+})
+
+
+
+
+</script>
+<title>Document</title>
+</head>
+<body>
+
+
+<div id="wrap">
+    <ul>
+        <li>hello_Element001</li>
+        <li>hello_Element002</li>
+        <li>hello_Element003</li>
+        <li>hello_Element004</li>
+        <li>hello_Element005</li>
+    </ul>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+//인자가 있는 함수는 콜백함수. 이게 콜백함수다.
+$(document).ready(function() {
+    console.log($(".hi").text()); // console.log(jQuery(".hi").text()) 랑 같은 꼴
+})
+// $("선택자") 라고 쓰면 "선택자"라는 것을 찾아주는것이고,
+// $(선택자) 라고 쓰면 선택자라는 변수명을 뜻하는 것이다. var 선택자 = XX; 라는 변수를 별도로 만들어줘야 된다.
+//
+// even은 짝수, odd는 홀수, :first-child는 $(li:first)라고 하고, :last-child는 $(li:last)라고 한다. :nth-child는 eq다. $(li:eq(3))은 4번째 것을 뜻한다. 0부터 시작하기때문에. 반대로 음수값을 주면 "뒤에서부터 1"로 계산이 된다. $(li:eq(-3)) 이라고 하면 뒤에서 3번째 것을 뜻한다.
+// 순서는 0부터 시작하기때문에 예를들어 $('li:even').css('color','red')를 하면 0,2,4,6~ 이렇게 선택된다. 화면상에는 1,3,5~ 이 바껴보이는 것이다.
+// lt: < / gt: >
+//
+// size(); 는 javascript에서 .length 같은 것. 1부터 인식한다. 배열에 갯수를 알아낸다. (length는 변수일 경우에, 글자수까지 알아낸다. size()는 글자 갯수를 알지는 못한다.)
+//
+// .index(); 는 문서 안에 몇번째에 있는지 알려주는 것. (this.index는 내가 선택한 그것 중에 넌 몇번째에 있니?). 0부터 시작한다.
+//
+// .this는 문자열로 쓰는게 아니다.
+
+
+
+
+</script>
+</head>
+<body>
+
+
+<div class="hi">hihihihihihihihihihi</div>
+
+
+</body>
+</html>
