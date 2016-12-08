@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+* { margin:0px; padding:0px; }
+ul { list-style:none; }
+a { color:#000; text-decoration:none; }
+
+.slide { position:relative; width:600px; height:500px; margin:0px auto; }
+.slide .btngrp button { padding:6px 10px; }
+.slide .btngrp button.prev { position:absolute; top:50%; left:-80px; }
+.slide .btngrp button.next { position:absolute; top:50%; right:-80px; }
+
+.slide .view { position:relative; width:600px; height:500px; border:1px solid #000; text-align:center; }
+.slide .view li { display:inline-block; }
+.slide .view li div { display:none; position:absolute; left:0px; top:0px; width:100%; height:100%; }
+.slide .view li.on div { display:block; }
+.slide .view li a { position:relative; top:520px; border:1px solid #000; padding:4px 10px; }
+.slide .view li a:hover { background:#000; color:#FFF; }
+.slide .view li:nth-child(1) div { background:red; }
+.slide .view li:nth-child(2) div { background:orange; }
+.slide .view li:nth-child(3) div { background:yellow; }
+</style>
+<script type="text/javascript">
+
+$(document).ready(function(){ //$(function(){ 라고 해도 된다.
+    var move = $('.slide').width();
+    var idx = 0;
+
+    $('.next').click(function(){
+        $('.slide .view ul li').eq(idx).find('div').animate({
+            left:-move
+        }).parent().next().find('div').css({
+            'display':'block',
+            'left':move
+        }).stop().animate({
+            left:0
+        });
+        console.log('aaaa');
+    })
+})
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+<div class="slide">
+    <div class="btngrp">
+        <button type="button" class="prev">이전</button>
+        <button type="button" class="next">다음</button>
+    </div>
+    <div class="view">
+        <ul>
+            <li class="on">
+                <a href="">1</a>
+                <div></div>
+            </li>
+            <li>
+                <a href="">2</a>
+                <div></div>
+            </li>
+            <li>
+                <a href="">3</a>
+                <div></div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+</body>
+</html>

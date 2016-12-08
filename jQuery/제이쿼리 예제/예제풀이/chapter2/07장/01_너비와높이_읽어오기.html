@@ -16,6 +16,8 @@
 			$(document).ready(function(){
 				var box = $('#wrapper');
 				$(window).resize(function(){
+					$('#wrapper').text(box.width());
+
 					$('#width').text(box.width());
 					$('#height').text(box.height());
 					$('#innerWidth').text(box.innerWidth());
@@ -23,12 +25,12 @@
 					$('#outerWidth').text(box.outerWidth(true));
 					$('#outerHeight').text(box.outerHeight(true));
 				});
-				
-				$(window).trigger('resize');
+
+				$(window).trigger('resize'); // $(window).resize(); 라고 해도됨
 			});
 		</script>
 	</head>
-	
+
 	<body>
 		<span>브라우저 창의 크기를 변경해 보고 박스의 크기가 각 메서드에 따라 어떻게 다른지 확인해 보세요.</span>
 		<div id="wrapper">

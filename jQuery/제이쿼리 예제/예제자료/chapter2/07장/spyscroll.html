@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+    // 방법.1
+    // $('.menu a').click(function(){
+    //   var idx = $(this).index();
+    //   var move = $('.wrap div:eq('+idx+')').offset().top;
+    //   $('body,html').animate({
+    //      scrollTop:move
+    //   })
+    // })
+
+
+    // 방법.2
+    var a = [];
+    $('.wrap div').each(function(){
+        a.push($(this).offset().top)
+    })
+
+    $('.menu a').click(function(){
+        var idx = $(this).index(); //눌렀을때 내가 클릭한 놈의 번호
+        $('body,html').animate({
+        scrollTop:a[idx] //빨간색 컨텐츠 영역이 body의 (0,0)좌표에 오지 않고 메뉴 밑에 오게하려면, scrollTop:a[idx]+30(메뉴 높이만큼) 혹은 scrollTop:a[idx]+ (메뉴의 height();) 해주면 된다.
+        })
+    })
+
+})
+
+</script>
+<style>
+* { margin:0px; padding:0px; }
+
+.wrap div { height:700px; border:1px solid red; }
+.menu { height:50px; background:#000; position:fixed; left:0px; top:0px; width:100%; }
+.menu a { color:#FFF; }
+</style>
+</head>
+<body>
+
+
+<div class="box">
+<div class="menu">
+    <a href="javascript:void(0)">menu1</a> <!-- 링크 기능을 막는 소스, a 태그를 클릭했을때 아무것도 실행하지 않게 만듭니다. -->
+    <a href="javascript:void(0)">menu2</a>
+    <a href="javascript:void(0)">menu3</a>
+    <a href="javascript:void(0)">menu4</a>
+    <a href="javascript:void(0)">menu5</a>
+</div>
+</div>
+
+<div class="wrap">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+
+
+</body>
+</html>

@@ -14,16 +14,25 @@
 		</style>
 		<script>
 			$(document).ready(function(){
-				
-				$(window).resize(function(){
-					
+				var box = $('#wrapper');
+				$(window).resize(function(){ // .resize()는 창에 변화가 생겼을때 실행하는 이벤트, 박스모델에 변화가 생길때 실행
+					$('#width').text(box.width()); //보더값 안나온다
+					$('#height').text(box.height()); //보더값 안나온다
+					$('#innerWidth').text(box.innerWidth()); //보더값, 패딩값 가져온다
+					$('#innerHeight').text(box.innerHeight()); //보더값, 패딩값 가져온다
+					$('#outerWidth').text(box.outerWidth()); //보더값, 패딩값, 마진값까지 가져온다 (마진은 박스가 확장된거). true값이 없으면 마진값을 뽑지 못한다.
+					$('#outerHeight').text(box.outerHeight()); //보더값, 패딩값, 마진값까지 가져온다
+
+					//$('#outerWidth').text(box.outerWidth(true));  "true" 라고 적으면 보더/패딩/마진값 다 가져오는데 왜 true를 안쓰면 사이즈가 다른지...?!?!
 				});
-				
+
 				$(window).trigger('resize');
+				//윈도우가 걸려있는 이벤트 중에 resize라는 이벤트를 처음에 지가 자율적으로 실행
+				// $(window).resize(); 라고 해도됨
 			});
 		</script>
 	</head>
-	
+
 	<body>
 		<span>브라우저 창의 크기를 변경해 보고 박스의 크기가 각 메서드에 따라 어떻게 다른지 확인해 보세요.</span>
 		<div id="wrapper">

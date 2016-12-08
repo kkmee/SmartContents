@@ -24,46 +24,89 @@
 			#image.winter { background:url(images/winter.jpg) }
 		</style>
 		<script>
+		/*
 			$(document).ready(function(){
 				$('#nav > ul > #springBtn').bind('click', function(){
-					
+
 				});
-				
+
 				$('#nav > ul > #summerBtn').bind('click', function(){
-					
+
 				});
-				
+
 				$('#nav > ul > #fallBtn').bind('click', function(){
-					
+
 				});
-				
+
 				$('#nav > ul > #winterBtn').bind('click', function(){
-					
+
 				});
 			});
+		*/
+
+		// 방법.1
+		/*
+		$(document).ready(function(){
+			$('#nav > ul > #springBtn').click(function(){ //$('#nav > ul > #sprimgBtn').click(click, function(){ 이라고 해도 됨
+				$('#image').removeClass().addClass('spring');//removeClass는 뒤에 쓰면 안됨. 앞에다 써야됨
+			});
+			$('#nav > ul > #summerBtn').click(function(){
+				$('#image').removeClass().addClass('summer');
+			});
+			$('#nav > ul > #fallBtn').click(function(){
+				$('#image').removeClass().addClass('fall');
+			});
+			$('#nav > ul > #winterBtn').click(function(){
+				$('#image').removeClass().addClass('winter');
+			});
+		})
+		*/
+
+		// 방법.2 : array를 사용하는 방법
+		$(document).ready(function(){
+			var photo = ["spring","summer","fall","winter"];
+			$('#nav > ul > li').click(function(){
+				var idx = $(this).index();
+				$('#image').removeClass().addClass(photo[idx]);
+			})
+		})
+
+
+		// 방법.3 : li에 data-view-class 라고 클래스명을 설정해준다.
+		/*
+		$(document).ready(function(){
+			$('#nav > ul > li').click(function(){
+				var addClass = $(this).attr('data-view-class');
+				$('#image').removeClass().addClass(addClass);
+			})
+		})
+*/
+
+
+
 		</script>
 	</head>
-	
+
 	<body>
 	<div id="wrapper">
 		<div id="nav">
 			<ul>
-				<li id="springBtn" class="first on">
+				<li id="springBtn" data-view-class="spring" class="first on">
 					<a href="#">
 						<img src="images/btn1_2.jpg" />
 					</a>
 				</li>
-				<li id="summerBtn">
+				<li id="summerBtn" data-view-class="summer">
 					<a href="#">
 						<img src="images/btn2_2.jpg" />
 					</a>
 				</li>
-				<li id="fallBtn">
+				<li id="fallBtn" data-view-class="fall">
 					<a href="#">
 						<img src="images/btn3_2.jpg" />
 					</a>
 				</li>
-				<li id="winterBtn">
+				<li id="winterBtn" data-view-class="winter">
 					<a href="#">
 						<img src="images/btn4_2.jpg" />
 					</a>

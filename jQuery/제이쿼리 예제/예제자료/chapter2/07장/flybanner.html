@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+
+// 방법.1
+$(document).ready(function(){
+    var $wrap = $('.wrap'); // $wrap 에서 $표시는 그냥 쓴거. 선택자라고 표시해놓은 것.
+
+    $(window).resize(function(){
+        $('.fly').css('left',$wrap.offset().left+$wrap.width()+10);
+        console.log($wrap.offset().left);
+        console.log($wrap.width());
+    });
+
+    $(window).scroll(function(){
+        $('.fly').stop().animate({ // animate를 쓸때는 구문을 이렇게 쓴다. .stop() 써주면 마지막 값만 받는다. 안 쓸 경우, 컨텐츠가 느릿느릿 움직인다.
+            top:$(this).scrollTop()+20 // 뒤에 20은 스크롤 내렸을때 20만큼 컨텐츠가 내려온다.
+        }, 1000); // 끝에 숫자로 속도 조절을 할 수 있다.
+    });
+
+    $(window).trigger('resize');
+})
+
+
+
+// 방법.2
+$(document).ready(function(){
+    var total;
+
+    function rs () {
+        var wrap = $('.wrap').width();
+        var wrap_offset = $('.wrap');offset().left;
+        total = wrap_width + wrap_offset;
+        console.log("width: "+wrap_width + " / offset().left: "+wrap_offset);
+    }
+
+    $(window).scroll(function(){
+        var sct = $(this).scrollTop();
+        console.log(sct);
+        $('.fly').stop().animate({
+            top:sct
+        })
+    })
+
+    $(window).resize(function(){
+        rs();
+        $('.fly').css('left',total+10);
+    })
+
+    $(window).trigger('resize');
+});
+
+
+</script>
+<style>
+* { margin:0px; padding:0px; }
+
+.wrap { width:800px; height:2000px; border:1px solid red; margin:0px auto; }
+.fly { position:absolute; left:0px; top:0px; width:80px; height:200px; border:1px solid blue; }
+
+</style>
+</head>
+<body>
+
+<div class="wrap"></div>
+<div class="fly"></div>
+
+</body>
+</html>
