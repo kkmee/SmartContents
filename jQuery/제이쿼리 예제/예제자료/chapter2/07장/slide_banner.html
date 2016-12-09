@@ -11,42 +11,159 @@
 ul { list-style:none; }
 a { color:#000; text-decoration:none; }
 
-.slide { position:relative; width:600px; height:500px; margin:0px auto; }
-.slide .btngrp button { padding:6px 10px; }
-.slide .btngrp button.prev { position:absolute; top:50%; left:-80px; }
-.slide .btngrp button.next { position:absolute; top:50%; right:-80px; }
+.slide { position:relative; width:600px; height:500px; margin:0px auto; border:1px solid #000; }
+.slide .btngrp button { position:absolute; top:50%; width:60px; height:40px; }
+.slide .btngrp button.prev { left:-80px; }
+.slide .btngrp button.next { right:-80px; }
 
-.slide .view { position:relative; width:600px; height:500px; border:1px solid #000; text-align:center; }
+.slide .view { position:relative; height:500px; text-align:center; overflow:hidden; }
 .slide .view li { display:inline-block; }
-.slide .view li div { display:none; position:absolute; left:0px; top:0px; width:100%; height:100%; }
-.slide .view li.on div { display:block; }
-.slide .view li a { position:relative; top:520px; border:1px solid #000; padding:4px 10px; }
-.slide .view li a:hover { background:#000; color:#FFF; }
+.slide .view li div { display:none; position:absolute; left:0px; top:0px; width:100%; height:100%; z-index:0 }
+.slide .view li:first-child div { display:block; }
 .slide .view li:nth-child(1) div { background:red; }
 .slide .view li:nth-child(2) div { background:orange; }
 .slide .view li:nth-child(3) div { background:yellow; }
+.slide .view li.on div { display:block; }
+.slide .view li a { position:relative; top:460px; border:1px solid #000; z-index:1; display:block; width:24px; height:24px; line-height:24px; background:#fff; }
+.slide .view li.on a { background:#000; color:#FFF; }
+.slide .view li a:hover { background:#000; color:#FFF; }
 </style>
 <script type="text/javascript">
 
 $(document).ready(function(){ //$(function(){ 라고 해도 된다.
-    var move = $('.slide').width();
-    var idx = 0;
+    var move = $('.slide').width(); //이동값
+    var idx = 0; //초기값
 
-    $('.next').click(function(){
-        $('.slide .view ul li').eq(idx).find('div').animate({
-            left:-move
-        }).parent().next().find('div').css({
-            'display':'block',
-            'left':move
-        }).stop().animate({
-            left:0
+    //이전 버튼
+    $('.prev').click(function(){
+        console.log(idx);
+
+        $('.slide .view ul li') //li를 선택해
+        .eq(idx) //li중에 idx번째 해당하는 놈
+        .find('div') //의 자식 div
+        .animate({ //움직임을 줘
+            left:move //오른쪽으로 슬라이드 width값 만큼 이동해
+        })
+        .parent() //부모로 올라와
+        .removeClass('on')
+        .prev() //그 이전 놈
+        .addClass('on')
+        .find('div') //의 자식
+        .css({ //한테 스타일 줘
+            'display':'block', //눈에 보이게 하고
+            'left':-move //왼쪽 끝으로 이동해
+        })
+        .stop()
+        .animate({ //움직임 줘
+            'left':0 //눈에 보이는 0위치로 이동해
         });
-        console.log('aaaa');
+
+        idx --;
+
+        if(idx < 0){
+            idx = 2;
+            $('.slide .view ul li').eq(idx).find('div').css({
+                'left':-move,
+                'display':'block'
+            }).stop().animate({
+                'left':0
+            })
+        }
+
+        if($('.view li.on').html() == undefined) {
+            $('.slide .view li:last').addClass('on')
+                idx = $('.slide .view li.on').index();
+                $('.view li').eq(idx).find('div').css({
+                    "left":"-100%"
+                }).stop().animate({
+                    left:0
+            })
+        }
+        console.log($('.slide .view ul li').find('div').parent().prev().html());
+
     })
-})
+
+    //다음 버튼
+    $('.next').click(function(){
+        console.log(idx);
+
+        $('.slide .view ul li') //li를 선택해
+        .eq(idx) //li중에 idx번째 해당하는 놈
+        .find('div') //의 자식 div
+        .animate({ //움직임을 줘
+            left:-move //왼쪽으로 슬라이드 width값 만큼 이동해
+        })
+        .parent() //부모로 올라와
+        .removeClass('on') //그 다음 놈
+        .next()
+        .addClass('on')
+        .find('div') //의 자식
+        .css({ //한테 스타일 줘
+            'display':'block', //눈에 보이게 하고
+            'left':move //오른쪽 끝으로 이동해
+        })
+        .stop()
+        .animate({ //움직임 줘
+            'left':0 //눈에 보이는 0위치로 이동해
+        });
+
+        idx ++; //그리고 idx 증가해(다음)
+        console.log(idx);
+
+        if(idx == $('.slide .view ul li').length) {
+            idx = 0;
+            $('.slide .view ul li').eq(idx).find('div').css({
+                'left':move
+            }).stop().animate({
+                'left':0
+            })
+        }
+
+        if($('.view li.on').html() == undefined) {
+            $('.slide .view li:first').addClass('on')
+                idx = $('.slide .view li.on').index();
+                $('.view li').eq(idx).find('div').css({
+                    "left":"100%"
+                }).stop().animate({
+                    left:0
+            })
+        }
+
+        console.log($('.slide .view ul li').find('div').parent().next().html());
+    })
+
+});
 
 
+/* ----------------------------------------------- 다른 방법 -------------------------------------------------
+    $(function(){
 
+        var = idx;
+
+        $('.next').click(function(){
+            idx = $('.slide .view li.on').index();
+
+            $('.view li').eq(idx).fine('div').animate({
+                left:'-100%' //%라는 단위는 없는데 이렇게 적으면 제이쿼리가 문자열로 인식해서 계산한다
+            }).parent().removeClass('on').next().addClass('on').find('div').css({
+                'display':'block',
+                'left':'100%'
+            }).stop().animate({
+                left:0
+            })
+
+            if($('.view li.on').html() == undefined) {
+                $('.slide .view li:first').addClass('on')
+                    idx = $('.slide .view li.on').index();
+                    $('.view li').eq(idx).find('div').css({
+                        "left":"100%"
+                    }).stop().animate({
+                        left:0
+                })
+            }
+        })
+    })
+*/
 
 
 
